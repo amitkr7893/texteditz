@@ -1,38 +1,172 @@
-.App {
-  text-align: center;
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  color: #ffffff;
 }
+body{
+  background-color: #dddddd;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  height: auto;
+  min-height: 16rem;
+  width: 100%;
+  padding: 2rem 1rem 6rem 1rem;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: start;
   align-items: center;
+  background: rgb(23, 23, 23);
+}
+h1{
+  font-family: monospace;
+}
+h1::first-letter{
+  position: absolute;
+  font-family: fantasy;
+  font-size: 2rem;
+
+}
+
+p{
+  max-width: 40rem;
+  padding: 1rem;
+  font-size: smaller;
+  text-align: center;
+  color: #e2f4ff;
+}
+b{
+  padding: .4rem;
+  display: block;
+  font-size: 1.2rem;
+}
+.form_container{
+  height: auto;
+  width: 100%;
+} 
+
+.form{
+  width: max-content;
+  max-width: 90rem;
+  position: relative;
+  margin: auto;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  transform: translateY(-4rem);
 }
 
-.App-link {
-  color: #61dafb;
+.form .textArea_container{
+  margin-bottom: 1rem;
+  position: sticky;
+  top: 8rem;
+  z-index: 10;
+  box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.199) ;
+  background: rgb(255, 255, 255);
+  margin-bottom: 2rem;
 }
+.form .textArea{
+  height: 16rem;
+  width: 90vw;
+  max-width: 50rem;
+  margin: 0% auto;
+  resize: none;
+  border: none;
+  outline-color: rgb(112, 112, 112);
+  color: rgb(59, 59, 59);
+  padding: 1rem;
+}
+.form .textArea::placeholder{
+  color: rgb(157, 157, 157);
+}
+.textArea_container .counter{
+  /* background: rgb(44, 163, 50); */
+  color: rgb(255, 255, 255);
+  font-size: small;
+  padding: 4px 16px;
+  background: rgb(155, 155, 155);
+}
+.form .textArea_container::before{
+  content: "Text has copied successfully";
+  position: absolute;
+  height: max-content;
+  font-size: small;
+  padding: 4px 1rem;
+  width: 100%;
+  border-radius: 4px;
+  bottom: 102%; 
+  left: 0%;
+  text-align: center;
+  background: #8b8b8b;
+  box-sizing: border-box;
+}
+.form .textArea_container.upperCase::before{
+  content: "Converted to Uppercase successfully";
+}
+.form .textArea_container.lowerCase::before{
+  content: "Converted to LowerCase successfully";
+}
+.form .textArea_container.capitalizeCase::before{
+  content: "Converted to CapitalizeCase successfully";
+}
+.form .textArea_container.sentenceCase::before{
+  content: "Converted to SentenceCase successfully";
+}
+.form .textArea_container.alternateCase::before{
+  content: "Converted to AlternateCase successfully";
+}
+.form .textArea_container.inverseAlternateCase::before{
+  content: "Converted to Inverse AlternateCase successfully";
+}
+.form .textArea_container.removeExtraSpaces::before{
+  content: "Extra spaces have been removed successfully";
+}
+.form .textArea_container.copyText::before{
+  content: "Text has been copied successfully";
+}
+.form .textArea_container.clearText::before{
+  content: "Text has cleaned successfully";
+}
+.form .textArea_container.hide::before{
+  display: none;
+}
+.form button{
+  height: auto;
+  width: 60%;
+  padding: .4rem 2rem;
+  border-radius: .2rem;
+  margin: .4rem;  
+  border: none;
+  background: rgb(14, 15, 15);
+  opacity: .8;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.288) ;
+}
+.form button:hover{
+  opacity: 1;
+}
+.form button.copyText{
+  background: rgb(0, 148, 227);
+}
+.form button.clearText{
+  background: rgb(216, 53, 12);
+}
+/* .form button.copyText:hover{ */
+  /* background: linear-gradient(to right,rgb(25, 88, 131), rgb(62, 125, 184)); */
+/* } */
+/* .form button.clearText:hover{ */
+  /* opacity: .8; */
+  /* background: linear-gradient(to right,rgb(160, 31, 31), rgb(224, 90, 90)); */
+/* } */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer{
+  color: rgb(121, 121, 121);
+  width: max-content;
+  font-size: x-small;
+  letter-spacing: 2px;
+  margin: auto;
+  padding: 4rem 0% 1rem 0%;
+
 }
